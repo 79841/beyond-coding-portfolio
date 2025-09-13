@@ -6,11 +6,11 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  role: "Curious Freshman",
+  avatar: "/images/projects/project-01/python-logo.png",
+  email: "79841@naver.com",
+  location: "Asia/Seoul", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Korean"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -30,17 +30,7 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://github.com/79841",
   },
   {
     name: "Email",
@@ -55,12 +45,13 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>생명공학과 골프 마니아</>,
   featured: {
     display: true,
     title: (
       <>
-        Recent project: <strong className="ml-4">Once UI</strong>
+        Recent project:{" "}
+        <strong className="ml-4">Portfolio Website Development</strong>
       </>
     ),
     href: "/work/building-once-ui-a-customizable-design-system",
@@ -91,7 +82,7 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -99,40 +90,73 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for
-        transforming complex challenges into simple, elegant design solutions.
-        Her work spans digital interfaces, interactive experiences, and the
-        convergence of design and technology.
+        I am a freshman at YISS with interests both inside and outside school.
+        While I have some background in sports, such as being part of the
+        school’s cross country team and playing golf for several years, I am
+        especially drawn to academics. I enjoy exploring subjects like coding,
+        where I can solve problems and create projects, and biology, where I
+        learn more about how life and the human body work.
       </>
     ),
   },
-  work: {
+  achievements: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
-    experiences: [
+    title: "Achievements",
+    achievements: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
-        achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20%
-            increase in user engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows,
-            enabling designers to iterate 50% faster.
-          </>,
-        ],
+        title:
+          "2023 Asian Intercontinental Make X Tournament starter skill test winner",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/achievements/image-example-1.png",
+            alt: "2023 Asian Intercontinental Make X Tournament starter skill test winner",
             width: 16,
             height: 9,
           },
         ],
+      },
+      {
+        title: "YISS Vex Robotics 8th Grade course",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+    ],
+  },
+  work: {
+    display: true, // set to false to hide this section
+    title: "Activities & Experiences",
+    experiences: [
+      {
+        company: "Portfolio Website Development", // 주제 title
+        timeframe: "2025.08 - 2025.9",
+        role: "Frontend Developer",
+        achievements: [
+          <>
+            Built my first personal portfolio website using Next.js template,
+            customizing the design to reflect my personal style and brand
+            identity
+          </>,
+          <>
+            Successfully deployed the website to Vercel with seamless CI/CD
+            integration, experiencing the satisfaction of seeing my work go live
+          </>,
+          <>
+            Gained valuable insights into modern web development workflow, from
+            initial setup to production deployment
+          </>,
+          <>
+            Developed an eye for UI/UX details while personalizing components
+            and layout to create a cohesive visual experience
+          </>,
+          <>
+            Understood the significance of SEO optimization and performance
+            considerations in real-world web development projects
+          </>,
+        ],
+        images: [],
       },
       {
         company: "Creativ3",
@@ -154,26 +178,35 @@ const about = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "YISS",
+        description: <>...</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Beyond Coding",
+        description: <>Coding Academy</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Skills & Talents",
     skills: [
       {
-        title: "Figma",
+        title: "Sports",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            I have been active in sports for many years, starting with golf,
+            which I have played for seven years and continue to enjoy as a
+            member of the YISS golf club. Alongside golf, I also play badminton
+            as a hobby. Since middle school, I have been a part of my school’s
+            cross country team, and I am continuing with it as a freshman,
+            building endurance and teamwork. Altogether, these sports have
+            shaped my athletic experience by giving me both individual and team
+            challenges.
+          </>
         ),
         // optional: leave the array empty if you don't want to display images
         images: [
@@ -192,16 +225,14 @@ const about = {
         ],
       },
       {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
+        title: "Python",
+        description: <>...</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
+            src: "/images/projects/project-01/python-logo.png",
             alt: "Project image",
-            width: 16,
+            width: 9,
             height: 9,
           },
         ],
@@ -221,9 +252,9 @@ const blog = {
 
 const work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  label: "Activities & Experiences",
+  title: `Activities & Experiences – ${person.name}`,
+  description: `Acitivities and Experiences of ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
