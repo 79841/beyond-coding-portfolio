@@ -15,24 +15,32 @@ import {
   SpacingToken,
 } from "@once-ui-system/core";
 
-export async function generateMetadata() {
-  return {
-    ...Meta.generate({
-      title: home.title,
-      description: home.description,
-      baseURL: baseURL,
-      path: home.path,
-      image: home.image,
-    }),
-    openGraph: {
-      title: home.title,
-      description: home.description,
-      url: "./",
-      images: ["/images/avatar.jpg"],
-      type: "website",
-    },
-  };
-}
+import type { Metadata } from "next";
+import Head from "next/head";
+
+export const metadata: Metadata = {
+  ...Meta.generate({
+    title: home.title,
+    description: home.description,
+    baseURL: baseURL,
+    path: home.path,
+    image: home.image,
+  }),
+  ...Meta.generate({
+    title: home.title,
+    description: home.description,
+    baseURL: baseURL,
+    path: home.path,
+    image: home.image,
+  }),
+  openGraph: {
+    title: home.title,
+    description: home.description,
+    url: "./",
+    images: ["/images/avatar.jpg"],
+    type: "website",
+  },
+};
 
 export default async function RootLayout({
   children,
@@ -52,7 +60,7 @@ export default async function RootLayout({
         fonts.code.variable
       )}
     >
-      <head>
+      <Head>
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{
@@ -110,7 +118,7 @@ export default async function RootLayout({
             `,
           }}
         />
-      </head>
+      </Head>
       <Providers>
         <Column
           as="body"
